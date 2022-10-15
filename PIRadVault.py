@@ -8,7 +8,7 @@ from azure.identity import DefaultAzureCredential
 # Python 3.10 function that will retrive secrets from AKV. 
 
 class SecretValue: 
-    
+    # Get Vault Name from Secret 
     def __init__(self,Secret_Name): 
         self.vault_name = os.getenv("VAULT_NAME")
         self.secret_name = Secret_Name
@@ -18,6 +18,8 @@ class SecretValue:
         # Build the AKV URI string 
         Uri = f"https://{self.vault_name}.vault.azure.net"
         logging.info('Retreiving secret: {0} from: {1}'.format(self.secret_name,self.vault_name))
+        
+        # Attempt to retrieve secret
         resp = SecretClient(Uri,DefaultAzureCredential()).get_secret(self.secret_name)
         
         # If the secret value is Null, throw an error
