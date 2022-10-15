@@ -1,7 +1,5 @@
-from mimetypes import init
 import os
 import logging
-from typing_extensions import Self
 from azure.keyvault.secrets import SecretClient
 from azure.identity import DefaultAzureCredential
 
@@ -18,6 +16,8 @@ class SecretValue:
         # Build the AKV URI string 
         Uri = f"https://{self.vault_name}.vault.azure.net"
         logging.info('Retreiving secret: {0} from: {1}'.format(self.secret_name,self.vault_name))
+        
+        # Attempt to retrieve secret
         resp = SecretClient(Uri,DefaultAzureCredential()).get_secret(self.secret_name)
         
         # If the secret value is Null, throw an error
