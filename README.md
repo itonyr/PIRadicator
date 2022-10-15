@@ -3,9 +3,10 @@ This is a slack application that will scrape all public channels for PII, notify
 
 ## Goals
 
--[ ] Create Slack App 
--[ ] Figure out how to retrieve messages from slack 
--[ ] Investigate AI libraries for scraping the messages within slack 
--[ ] Implement CI/CD 
--[ ] Use Terraform for resource deployment 
+- [ ] Create Slack App 
+
+- [ ] Figure out how to retrieve messages from slack 
+- [ ] Investigate AI libraries for scraping the messages within slack 
+- [ ] Implement CI/CD 
+- [ ] Use Terraform for resource deployment 
 
