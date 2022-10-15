@@ -8,5 +8,9 @@ This is a slack application that will scrape all public channels for PII, notify
 - [ ] Figure out how to retrieve messages from slack 
 - [ ] Investigate AI libraries for scraping the messages within slack 
 - [ ] Implement CI/CD 
-- [ ] Use Terraform for resource deployment 
-
+- [ ] Use Terraform for resource deployment
+- [ ] Place messages onto a queue 
+- [ ] Retreive messages off of a queue 
+- [ ] Spin up container apps 
+- [ ] Lock down container apps to only communicate with one another 
+- [ ] Implement an NSG to that the container apps can only reach out to slack 
