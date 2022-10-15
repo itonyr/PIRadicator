@@ -6,7 +6,7 @@ from azure.identity import DefaultAzureCredential
 # Python 3.10 function that will retrive secrets from AKV. 
 
 class SecretValue: 
-    
+    # Get Vault Name from Secret 
     def __init__(self,Secret_Name): 
         self.vault_name = os.getenv("VAULT_NAME")
         self.secret_name = Secret_Name
