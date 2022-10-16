@@ -6,18 +6,19 @@ This is a slack application that will scrape all public channels for PII, notify
 - [x] Create Slack App 
 - [x] Create Class for retrieving secrets from `Azure Key Vault`
 - [ ] Figure out how to retrieve messages from slack 
-- [ ] Investigate NLP libraries 
+- [ ] Decide which NLP library to leverage 
 - [ ] Imlement queueing for NLP scanning of message content 
-- [ ] Retreive messages off of a queue 
-- [ ] Spin up container apps 
-- [ ] Lock down container apps to only communicate with one another 
-- [ ] Implement an NSG so that the container apps can only reach out to slack 
+- [ ] Implement Queueing system   
 - [ ] Allow for different batch sizes 
 - [ ] Allow for different channels to have different retention policies
-- [ ] Figure out how to send direct messages
+- [ ] Complete direct message sending logic
 - [ ] Determine a username for the account sending direct messages  
 - [ ] Build a real-time workflow for flagging PII as it's sent using Real-Time Messaging API
 
+## Real-Time workflow 
+### Overview
+The Real-Time scanning portion of the application would scan each message immediately after it's sent, then immediately flag a message as PII. The current implementaiton I am writing will scan slack at regular intervals, looking for messages older than a certain date. I'm planning on writing these as two separate applications; the core application, and the real time scanner. 
+
 ## Stretch 
 - [ ] Implement CI/CD 
-- [ ] Use Terraform for resource deployment
+- [ ] Create sample Terraform for resource deployment
