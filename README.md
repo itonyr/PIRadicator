@@ -5,7 +5,7 @@ This is a slack application that will scrape all public channels for PII, notify
 
 - [x] Create Slack App 
 - [x] Create Class for retrieving secrets from `Azure Key Vault`
-- [ ] Figure out how to retrieve messages from slack 
+- [ ] Complete message retrieval logic
 - [ ] Decide which NLP library to leverage 
 - [ ] Imlement queueing for NLP scanning of message content 
 - [ ] Implement Queueing system   
