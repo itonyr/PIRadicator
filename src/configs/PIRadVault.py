@@ -24,6 +24,6 @@ class SecretValue:
         if resp != None: 
             return str(resp)
         else: 
-            message = 'Unable to retrieve secret{0}}'.format(self.secret_name)
+            message = 'Unable to retrieve secret{0}'.format(self.secret_name)
             logging.error(message)
             raise ValueError(message)
