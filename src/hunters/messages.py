@@ -45,14 +45,14 @@ class Messages:
         client = WebClient(self.Connection_String)
         try: 
             # Pass the channel Id into the 'type' field to list a specific channel 
-            channels = client.conversations_history(
+            messages = client.conversations_history(
                 channel=self.Channel_Id,
                 latest=self.Message_Id,
                 limit=self.limit,
                 inclusive=self.inclusive
                 )['messages']
-            logging.info('Retrieved {0} messages from slack'.format(len(channels)))  # type: ignore
-            return channels
+            logging.info('Retrieved {0} messages from conversation{1}'.format(len(messages),self.Channel_Id))  # type: ignore
+            return messages
         except: 
             # If any unexpected exceptions occur, throw this error.
             message = ('An unexpected error occured. Unable to get messges from channel: {0}'.format(self.Channel_Id))
