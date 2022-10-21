@@ -7,9 +7,13 @@ This is a slack application that will scrape all public channels for PII, notify
 - [x] Create Slack App  
 - [x] Create Class for retrieving secrets from `Azure Key Vault`
 - [X] Complete message retrieval logic
+- [ ] Spin Up Mongo DB using Terraform 
+- [ ] Write and document `DbUpsertWorker` logic
+- [ ] Write and document `SlackMessageSenderWorker` logic
+- [ ] Spin up Service Bus Queue using Terraform
+- [ ] 
 - [ ] Decide which NLP library to leverage  
-- [ ] Imlement queueing for NLP scanning of message content  
-- [ ] Implement Queueing system  
+- [ ] Write `SlackMessageAnalyzerWorker` logic
 - [ ] Allow for different batch sizes  
 - [ ] Allow for different channels to have different retention policies
 - [ ] Complete direct message sending logic
